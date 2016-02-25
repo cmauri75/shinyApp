@@ -7,33 +7,13 @@
 #
 library(shiny)
 
-# shinyUI(fluidPage(
-#
-#   # Application title
-#   titlePanel("Old Faithful Geyser Data"),
-#
-#   # Sidebar with a slider input for number of bins
-#   sidebarLayout(
-#     sidebarPanel(
-#       sliderInput("bins",
-#                   "Number of bins:",
-#                   min = 1,
-#                   max = 50,
-#                   value = 30)
-#     ),
-#
-#     # Show a plot of the generated distribution
-#     mainPanel(
-#       plotOutput("distPlot")
-#     )
-#   )
-# ))
 
-shinyUI(pageWithSidebar(
-    headerPanel("Example plot"),
-    sidebarPanel(
-        sliderInput('mu', 'Guess at the mu',value = 70, min = 60, max = 80, step = 0.05,)  ),
-    mainPanel(
-        plotOutput('newHist')
-    )
+shinyUI(fluidPage(
+    headerPanel("Pace calculator "),
+    h3("I run 3 km in: "),
+    numericInput("min", label = "minutes", value = "12", min = 7, max=30, width = "100px"),
+    numericInput("sec", label = "seconds", value = "00", min = 0, max=59, width = "100px"),
+
+    hr(),
+    fluidRow(column(8, verbatimTextOutput("value")))
 ))

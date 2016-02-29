@@ -13,3 +13,4 @@ http://www.albanesi.it/corsa/tempomaratona.htm -
 http://www.albanesi.it/arearossa/articoli/categoria.htm
 
 App link: https://cmauri.shinyapps.io/cpShiny/
+Github repo: https://github.com/cmauri75/shinyApp
